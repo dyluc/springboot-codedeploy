@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: ./myapp-0.0.1-SNAPSHOT.jar
+    destination: /home/ec2-user
+hooks:
+  BeforeInstall:
+    - location: stop.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: run.sh
+      timeout: 300
+      runas: root
+  ValidateService:
+    - location: validate.sh
+      timeout: 300
+      runas: root
