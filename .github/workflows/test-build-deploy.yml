@@ -51,7 +51,7 @@ jobs:
 
       - name: Push Revision to S3
         run: |
-          aws s3 --region eu-west-2 cp latest.zip s3://myapp-revisions
+          aws s3 --region eu-west-2 cp latest.zip s3://springboot-codedeploy-revisions
   deploy:
     needs: build-push
     runs-on: ubuntu-latest
