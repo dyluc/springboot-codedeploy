@@ -39,7 +39,7 @@ jobs:
       - name: Zip Revision
         uses: papeloto/action-zip@v1
         with:
-          files: scripts build/libs/myapp-0.0.1-SNAPSHOT.jar appspec.yml
+          files: scripts build/libs/springboot-codedeploy-0.0.1-SNAPSHOT.jar appspec.yml
           dest: latest.zip
 
       - name: Configure AWS Credentials

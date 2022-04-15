@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: ./myapp-0.0.1-SNAPSHOT.jar
+  - source: ./springboot-codedeploy-0.0.1-SNAPSHOT.jar
     destination: /home/ec2-user
 hooks:
   BeforeInstall:

@@ -1,6 +1,6 @@
 #!/bin/sh
 HOME='/home/ec2-user'
-JAR_FILE='/home/ec2-user/myapp-0.0.1-SNAPSHOT.jar'
+JAR_FILE='/home/ec2-user/springboot-codedeploy-0.0.1-SNAPSHOT.jar'
 echo "========== new run ==========" >> $HOME/logs/run-log.txt
 echo $(date) >> $HOME/logs/run-log.txt
 APP_SECRET=`echo $(aws ssm get-parameters --region eu-west-2 --names APP_SECRET --with-decryption --query Parameters[0].Value) | sed -e 's/^"//' -e 's/"$//'`
