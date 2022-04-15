@@ -66,6 +66,6 @@ jobs:
       - name: Create CodeDeploy Deployment
         run: |
           aws deploy create-deployment \
-            --application-name CodeDeployExample \
-            --deployment-group-name CodeDeployExampleDeploymentGroup \
-            --s3-location bucket=myapp-revisions,key=latest.zip,bundleType=zip
+            --application-name SpringBootCodeDeployApplication \
+            --deployment-group-name SpringBootCodeDeployDeploymentGroup \
+            --s3-location bucket=springboot-codedeploy-revisions,key=latest.zip,bundleType=zip
